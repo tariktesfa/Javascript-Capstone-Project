@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
+* {
+  margin: 0;
+}
+
 body {
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+header {
+  background-color: #000;
+  display: flex;
+  gap: 200px;
+}
+
+header h1 {
+  color: #fff;
+  padding: 10px;
+  margin-left: 100px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 30px;
 }
