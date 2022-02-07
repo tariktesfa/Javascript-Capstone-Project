@@ -1,0 +1,4 @@
+# ignore node modules
+node_modules/
+sampleArray.js
+package-lock.json
