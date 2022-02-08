@@ -38,13 +38,34 @@ nav a {
 }
 
 .movie-cards img {
-  width: 90%;
+  width: 50%;
   height: auto;
 }
 
+h4 {
+  padding-right: 6px;
+  margin-inline-start: 6em;
+}
 .card {
   display: flex;
   flex-direction: column;
+}
+
+button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400 !important;
+  background-color: #e63946ff;
+  color: #fff;
+  padding: 23px 50px;
+  margin: auto;
+  text-align: center;
+  display: inline-block !important;
+  text-decoration: none;
+  border: 0px;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s 0s ease-in-out;
 }
 
 .span-items {
@@ -60,4 +81,11 @@ footer {
   background-color: grey;
   color: white;
   text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
