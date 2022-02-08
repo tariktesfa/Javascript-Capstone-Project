@@ -30,3 +30,34 @@ nav a {
   font-size: 24px;
   padding: 10px 30px;
 }
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: beige;
+}
+
+.movie-cards img {
+  width: 90%;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.span-items {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: grey;
+   color: white;
+   text-align: center;
+}
