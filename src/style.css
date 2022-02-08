@@ -12,6 +12,9 @@ header {
   background-color: #000;
   display: flex;
   gap: 200px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 header h1 {
@@ -35,20 +38,25 @@ nav a {
   display: grid;
   grid-template-columns: auto auto auto auto;
   background-color: beige;
+  margin: 70px 80px;
 }
 
 .movie-cards img {
-  width: 50%;
-  height: auto;
+  width: 250px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h4 {
   padding-right: 6px;
-  margin-inline-start: 6em;
+  margin-left: 45px;
 }
+
 .card {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 button {
@@ -57,15 +65,16 @@ button {
   font-weight: 400 !important;
   background-color: #e63946ff;
   color: #fff;
-  padding: 23px 50px;
-  margin: auto;
+  padding: 10px;
+  margin: 8px auto;
   text-align: center;
   display: inline-block !important;
   text-decoration: none;
-  border: 0px;
-  width: max-content;
+  border: 0;
   cursor: pointer;
   transition: all 0.3s 0s ease-in-out;
+  height: 40px;
+  width: 200px;
 }
 
 .span-items {
@@ -80,12 +89,6 @@ footer {
   width: 100%;
   background-color: grey;
   color: white;
+  padding: 10px;
   text-align: center;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
