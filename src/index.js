@@ -4,7 +4,12 @@ import moviesCall from './modules/movieCall.js';
 
 const starter = async () => {
     const data = await moviesCall();
-    await Render(data);
+
+    let films = data.slice(0, 20).map((item) => {
+        return item 
+    });
+    
+    await Render(films);
 }
 
 starter();
