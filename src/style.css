@@ -12,6 +12,9 @@ header {
   background-color: #000;
   display: flex;
   gap: 200px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 header h1 {
@@ -35,16 +38,43 @@ nav a {
   display: grid;
   grid-template-columns: auto auto auto auto;
   background-color: beige;
+  margin: 70px 80px;
 }
 
 .movie-cards img {
-  width: 90%;
-  height: auto;
+  width: 250px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4 {
+  padding-right: 6px;
+  margin-left: 45px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400 !important;
+  background-color: #e63946ff;
+  color: #fff;
+  padding: 10px;
+  margin: 8px auto;
+  text-align: center;
+  display: inline-block !important;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s 0s ease-in-out;
+  height: 40px;
+  width: 200px;
 }
 
 .span-items {
@@ -53,11 +83,12 @@ nav a {
 }
 
 footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: grey;
-   color: white;
-   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
