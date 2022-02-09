@@ -5,10 +5,9 @@ const getMovieComment = async (movieId) => {
 };
 
 document.addEventListener('click', async (e) => {
-  let commentNumber = 0;
   if (e.target.matches('.comment-btn')) {
     await getMovieComment(e.target.id);
-    commentNumber += 1;
+    // commentNumber += 1;
     document.querySelector('.total-comments').textContent = commentNumber || 0;
   }
 });
