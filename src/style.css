@@ -114,9 +114,14 @@ footer {
   border-radius: 10px;
 }
 
+.fa {
+  font-size: 2em;
+}
+
 #close {
   float: right;
-  font-size: 2em;
+  border: none;
+  background-color: #fff;
 }
 
 .display {
@@ -147,7 +152,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
+  width: 85%;
 }
 
 input,
