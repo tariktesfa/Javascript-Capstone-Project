@@ -1,4 +1,5 @@
-import { commentCounter } from "./commentCounter.js";
+// eslint-disable-next-line import/no-cycle
+import { commentCounter } from './commentCounter.js';
 
 const commentsApiKey = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
 const getMovieComment = async (movieId) => {
