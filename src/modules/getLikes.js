@@ -1,4 +1,5 @@
 const list = document.getElementById('cards');
+console.log(list);
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Uxox2qKR3NUpYCRDwsgp/likes';
 
 export const postLikes = async (id) => {
@@ -26,13 +27,20 @@ export const updateLikes = async (id) => {
             results = element.likes;
         }
     });
-    
+    return results;
+}
+
+const addLikes = (e) => {
+    const currentNumber = e.innerText;
+    e.innerText = parseInt(currentNumber, 10) + 1;   
 }
 
 list.addEventListener('click', (e) => {
     if (e.target.className === 'far fa-heart likes') {
         const icons = e.target;
         const likeId = icons.parentNode.querySelector('span').id;
+        const displayLikes = icons.parentNode.querySelector('span');
         updateLikes(likeId);
+        addLikes(displayLikes)
     }
 })
