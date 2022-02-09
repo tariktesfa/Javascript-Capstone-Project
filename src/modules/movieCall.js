@@ -3,4 +3,5 @@ const moviesCall = async () => {
   const allData = await movieData.json();
   return allData;
 };
+
 export default moviesCall;
