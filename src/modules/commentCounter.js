@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import getMovieComment from './commentApi.js';
 
 const commentPopup = document.querySelector('.comment-popup');
