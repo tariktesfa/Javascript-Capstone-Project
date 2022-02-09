@@ -1,10 +1,10 @@
 ## Javascript Capstone Project
 
-It is a JavaScript group capstone project built with an external API.
+It is a JavaScript group capstone project built with an external Movie API.
 
 ## Screenshot
 
-![App Screenshot]()
+![screenshot](https://user-images.githubusercontent.com/38283436/153200284-0fe1978e-8b14-48f9-a59a-5f5aba8bdd1b.png)
 
 ## Live Demo
 
