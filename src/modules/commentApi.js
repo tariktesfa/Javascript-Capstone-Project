@@ -11,7 +11,7 @@ document.addEventListener('click', async (e) => {
     const comment = await getMovieComment(e.target.id);
     const commentNumber = commentCounter(comment);
     document.querySelector('.total-comments').textContent = commentNumber || 0;
-    document.querySelector('.total-comments').textContent = 0;
+    await getMovieComment(e.target.id);
   }
 });
 
