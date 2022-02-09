@@ -105,11 +105,11 @@ const showCommentPopup = (movieId) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const user = form.elements.name.value;
-      const comment = form.elements.description.value;
+      const description = form.elements.description.value;
       addComment({
         item_id: movieId,
         username: user,
-        comment: comment,
+        comment: description,
       }).then(() => {
         showComments(movieId);
         // updateCommentCounter(movieId);
