@@ -44,7 +44,7 @@ const showComments = (movieId) => {
       });
       displayMovieComments(comments);
     } else {
-      displayMovieComments('There is no comments posted yet for this movie.');
+      displayMovieComments('No comment posted yet.');
     }
   });
 };
@@ -61,32 +61,41 @@ const showCommentPopup = (movieId) => {
   getMovieData(movieId).then((data) => {
     commentPopup.innerHTML = `<div class="popup">
     <i class="fa fa-times" id="close" aria-hidden="true"></i>
-    <div class="display">
-        <div class="movie-img">
-            <img src=${data.image} alt="Movie image">
+    <div class="container">
+        <div class="display">
+          <div class="description">
+            <img src=${data.image.medium} alt="Movie image">
+            <h3 class="movie-title">${data.name}</h3>
+          </div>
+          <div class="display-detail">
+            <h3>More about the Movie</h3>
+           <ul>
+             <li>${data.summary}</li> 
+             <li><strong>Date of Release:</strong> ${data.premiered}</li>
+             <li><strong>Genres:</strong> ${data.genres}</li>                 
+             <li><strong>Rating:</strong> ${data.rating.average}</li>                 
+           </ul>  
+          </div>
         </div>
-        <div class="display-comment">
-            <div class="description">
-                <h3 class="movie-title">${data.name}</h3>
-            </div>
-            <div class="comment-counter">
-                <h3 class='counter'></h3>
-                <ul class="comment-list">
-            
-                </ul>
-            </div>
-            <div class="comment">
-                <div class="add-comment">
-                    <h3>Add Comment</h3>
-                </div>
-                <form class="form">
-                    <input type="text" name="name" id="name" placeholder="Your name">
-                    <textarea name="description" id="description" cols="30" rows="10"
-                        placeholder="Your insight"></textarea>
-                    <button id=${movieId} type="submit" class="submit-btn">Comment</button>
-                </form>
-            </div>
+      <div class="comment-container">
+        <div class="comment-display">
+          <h3 class='counter'>Comments(<span class="total-comments">0</span>)</h3>
+          <ul class="comments">
+
+          </ul>
         </div>
+        <div class="comment">
+        <div class="add-comment">
+          <h3>Add Comment</h3>
+        </div>
+        <form class="form">
+          <input type="text" name="name" id="name" placeholder="Your name">
+          <textarea name="description" id="description" cols="30" rows="10"
+              placeholder="Your insight"></textarea>
+          <button id=${movieId} type="submit" class="submit-btn">Comment</button>
+        </form>
+      </div>
+      </div>
     </div>
   </div>`;
     closeCommentPopup();
@@ -112,10 +121,10 @@ const showCommentPopup = (movieId) => {
 };
 
 const displayComments = () => {
-  const commentBtns = document.querySelectorAll('.comment');
+  const commentBtns = document.querySelectorAll('.comment-btn');
   commentBtns.forEach((movie) => {
     movie.addEventListener('click', () => {
-      const movieId = movie.getAttribute('id');
+      const movieId = movie.getAttribute('movie-id');
       showCommentPopup(movieId);
       document.body.style.overflow = 'hidden';
     });

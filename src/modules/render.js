@@ -7,7 +7,7 @@ const Render = async (data) => {
               <h4>${e.name}</h4>
               <span>14 likes</span>
           </div>
-          <button movie-id="" id="${e.id}" class="comment">Comment</button>
+          <button movie-id="${e.id}" id="${e.id}" class="comment-btn">Comment</button>
           </div>`;
   });
 };
