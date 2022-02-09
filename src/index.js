@@ -1,6 +1,7 @@
 import './style.css';
 import Render from './modules/render.js';
 import moviesCall from './modules/movieCall.js';
+import displayComment from './modules/commentPopup.js';
 
 const starter = async () => {
   const data = await moviesCall();
@@ -8,4 +9,6 @@ const starter = async () => {
   await Render(films);
 };
 
-starter();
+starter().then(() => {
+  displayComment();
+});
