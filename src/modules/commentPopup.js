@@ -1,5 +1,5 @@
 import getMovieComment from './commentApi.js';
-import updateCommentCounter from './commentCounter.js'
+import updateCommentCounter from './commentCounter.js';
 
 const commentApiEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
 const movieApi = 'https://api.tvmaze.com/shows';
