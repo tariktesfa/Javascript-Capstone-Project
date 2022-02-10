@@ -1,14 +1,13 @@
 /**
  * @jest-environment jsdom
  */
-
 import { commentCounter } from '../modules/commentCounter.js';
 
 describe('Testing comment counter', () => {
   const commentArr = [
     {
       id: 1,
-      name: 'Tarik T.',
+      name: 'Tarik Tesfa',
       comment: 'I loved it',
     },
     {
