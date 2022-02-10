@@ -8,7 +8,7 @@ describe('Testing comment counter', () => {
   const commentArr = [
     {
       id: 1,
-      name: 'Tarik',
+      name: 'Tarik T.',
       comment: 'I loved it',
     },
     {
