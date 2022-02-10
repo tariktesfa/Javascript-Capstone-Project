@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import getMovieComment from './commentApi.js';
+import getMovieComment from './comment.js';
 
 const commentPopup = document.querySelector('.comment-popup');
 const getTotalComments = async (movieId) => {

@@ -1,4 +1,4 @@
-import getMovieComment from './commentApi.js';
+import getMovieComment from './comment.js';
 import updateCommentCounter from './commentCounter.js';
 
 const commentApiEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
