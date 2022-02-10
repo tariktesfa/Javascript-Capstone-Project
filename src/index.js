@@ -11,7 +11,6 @@ const starter = async () => {
   await Render(films);
   const filmsCount = moviesCounter(films);
   showLikes(filmsCount);
-  
 };
 
 starter().then(() => {
