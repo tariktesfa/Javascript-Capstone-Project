@@ -35,7 +35,7 @@ const addLikes = (e) => {
 
 export const showLikes = (itemsCount) => {
   const counts = document.querySelector('.show');
-  counts.innerText = `${itemsCount} Movies`;
+  counts.innerText = `Movies(${itemsCount})`;
 };
 
 list.addEventListener('click', (e) => {
