@@ -4,8 +4,8 @@ import moviesCall from './modules/movieCall.js';
 import displayComment from './modules/commentPopup.js';
 
 const starter = async () => {
-  const data = await moviesCall();
-  const films = data.slice(0, 20).map((item) => item);
+  const movie = await moviesCall();
+  const films = movie.slice(0, 20).map((item) => item);
   await Render(films);
 };
 
