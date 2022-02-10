@@ -40,7 +40,7 @@ const showComments = (movieId) => {
     if (!data.error) {
       let comments = '';
       data.forEach((comment) => {
-        comments += `<li class="comments-list"> <small> ${comment.creation_date} </small>  <span> | ${comment.username}</span> "${comment.comment}" </li>`;
+        comments += `<li class="comments-list">${comment.creation_date} <span> ${comment.username}:</span>  ${comment.comment}</li>`;
       });
       displayMovieComments(comments);
     } else {
@@ -60,7 +60,7 @@ const closeCommentPopup = () => {
 const showCommentPopup = (movieId) => {
   getMovieData(movieId).then((data) => {
     commentPopup.innerHTML = `<div class="popup">
-    <i class="fa fa-times" id="close" aria-hidden="true"></i>
+    <button id="close"><i class="fa fa-times" aria-hidden="true"></i></button>
     <div class="container">
         <div class="display">
           <div class="description">
@@ -89,9 +89,9 @@ const showCommentPopup = (movieId) => {
           <h3>Add Comment</h3>
         </div>
         <form class="form">
-          <input type="text" name="name" id="name" placeholder="Your name">
+          <input type="text" name="name" id="name" placeholder="Your name" required>
           <textarea name="description" id="description" cols="30" rows="10"
-              placeholder="Your insight"></textarea>
+              placeholder="Your insight" required></textarea>
           <button id=${movieId} type="submit" class="submit-btn">Comment</button>
         </form>
       </div>
@@ -104,14 +104,15 @@ const showCommentPopup = (movieId) => {
     const form = commentPopup.querySelector('.form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const user = form.elements.username.value;
-      const msg = form.elements.comment.value;
+      const user = form.elements.name.value;
+      const description = form.elements.description.value;
       addComment({
         item_id: movieId,
         username: user,
-        comment: msg,
+        comment: description,
       }).then(() => {
         showComments(movieId);
+        // updateCommentCounter(movieId);
         form.reset();
       });
     });
