@@ -8,7 +8,6 @@ It is a JavaScript group capstone project built with an external Movie API.
 
 ## Live Demo
 
-[Live Demo]
 ## Built With
 
 - HTML
