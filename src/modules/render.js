@@ -2,7 +2,6 @@ import { updateLikes } from "./getLikes.js";
 
 const Render = async (data) => {
     data.forEach(async e => {
-        console.log(e.id);
         const likes = await updateLikes(e.id)
         const list = document.getElementById('cards');
         list.innerHTML += ` <div class="card" >
