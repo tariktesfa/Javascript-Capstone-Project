@@ -16,4 +16,4 @@ const updateCommentCounter = (movieId) => {
 };
 const commentCounter = (data) => (typeof (data) === 'object' ? data.length : 'invalid');
 
-export {commentCounter, updateCommentCounter}
+export { commentCounter, updateCommentCounter };

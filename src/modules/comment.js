@@ -1,6 +1,6 @@
 /* eslint-disable  import/no-cycle */
 
-import {commentCounter} from './commentCounter.js';
+import { commentCounter } from './commentCounter.js';
 import showCommentPopup from './commentPopup.js';
 
 const commentsApiKey = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
