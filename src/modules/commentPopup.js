@@ -1,5 +1,7 @@
+/* eslint-disable  import/no-cycle */
+
 import getMovieComment from './comment.js';
-import updateCommentCounter from './commentCounter.js';
+import {updateCommentCounter} from './commentCounter.js';
 
 const commentApiEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
 const movieApi = 'https://api.tvmaze.com/shows';
@@ -59,7 +61,7 @@ const closeCommentPopup = () => {
 };
 
 const showCommentPopup = async (movieId) => {
- await getMovieData(movieId).then((data) => {
+  await getMovieData(movieId).then((data) => {
     commentPopup.innerHTML = `<div class="popup">
     <button id="close"><i class="fa fa-times" aria-hidden="true"></i></button>
     <div class="container">

@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable  import/no-cycle */
 import getMovieComment from './comment.js';
 
 const commentPopup = document.querySelector('.comment-popup');
@@ -14,6 +14,6 @@ const updateCommentCounter = (movieId) => {
     commentPopup.querySelector('.total-comments').innerHTML = totalComment;
   });
 };
-export const commentCounter = (data) => (typeof (data) === 'object' ? data.length : 'invalid');
+const commentCounter = (data) => (typeof (data) === 'object' ? data.length : 'invalid');
 
-export default updateCommentCounter;
+export {commentCounter, updateCommentCounter}
