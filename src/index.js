@@ -1,7 +1,7 @@
 import './style.css';
 import Render from './modules/render.js';
 import moviesCall from './modules/movieCall.js';
-import showCommentPopup from './modules/commentPopup.js';
+import { showCommentPopup } from './modules/commentPopup.js';
 
 const starter = async () => {
   const movie = await moviesCall();

@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { commentCounter } from '../modules/commentCounter.js';
+import { commentCounter } from '../modules/commentPopup.js';
 
 describe('Testing comment counter', () => {
   const commentArr = [
