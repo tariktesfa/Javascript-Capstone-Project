@@ -58,8 +58,8 @@ const closeCommentPopup = () => {
   });
 };
 
-const showCommentPopup = (movieId) => {
-  getMovieData(movieId).then((data) => {
+const showCommentPopup = async (movieId) => {
+ await getMovieData(movieId).then((data) => {
     commentPopup.innerHTML = `<div class="popup">
     <button id="close"><i class="fa fa-times" aria-hidden="true"></i></button>
     <div class="container">
@@ -99,7 +99,6 @@ const showCommentPopup = (movieId) => {
       </div>
     </div>
   </div>`;
-    closeCommentPopup();
     showComments(movieId);
 
     const form = commentPopup.querySelector('.form');
@@ -122,15 +121,15 @@ const showCommentPopup = (movieId) => {
   closeCommentPopup();
 };
 
-const displayComments = () => {
-  const commentBtns = document.querySelectorAll('.comment-btn');
-  commentBtns.forEach((movie) => {
-    movie.addEventListener('click', () => {
-      const movieId = movie.getAttribute('movie-id');
-      showCommentPopup(movieId);
-      document.body.style.overflow = 'hidden';
-    });
-  });
-};
+// const displayComments = () => {
+//   const commentBtns = document.querySelectorAll('.comment-btn');
+//   commentBtns.forEach((movie) => {
+//     movie.addEventListener('click', () => {
+//       const movieId = movie.getAttribute('movie-id');
+//       showCommentPopup(movieId);
+//       document.body.style.overflow = 'hidden';
+//     });
+//   });
+// };
 
-export default displayComments;
+export default showCommentPopup;

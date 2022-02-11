@@ -6,9 +6,43 @@ It is a JavaScript group capstone project built with an external Movie API.
 
 ![screenshot](https://user-images.githubusercontent.com/38283436/153200284-0fe1978e-8b14-48f9-a59a-5f5aba8bdd1b.png)
 
+## Video Presentation
+
+[Click on the link to see the presentation](https://www.loom.com/share/828b38b2455e491a8151c352ab54727b?sharedAppSource=personal_library)
+
+
 ## Live Demo
 
-[Live Demo]
+[Live Demo Link]()
+
+## Clone and review it
+
+Run the following commands to clone and run it.
+
+### To clone the repository
+
+  `https://github.com/tariktesfa/Javascript-Capstone-Project.git`
+
+### To enter Directory
+
+`cd Javascript-Capstone-Project`
+
+### To Install Packages
+
+`npm install`
+
+### To run project on local server
+
+`npm start`
+
+### To run project tests
+
+`npm test`
+
+### To open project with vs code 
+
+`code .`
+
 ## Built With
 
 - HTML
@@ -16,6 +50,7 @@ It is a JavaScript group capstone project built with an external Movie API.
 - JavaScript
 - Webpack
 - Jest
+- API's
 
 ## Authors
 

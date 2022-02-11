@@ -1,14 +1,48 @@
+// import { updateLikes } from './getLikes.js';
+
+// const Render = async (data) => {
+//  const like= data.forEach(async(e) => {
+// const likes = await updateLikes(e.id)
+// return likes
+//   })
+//   data.forEach((e) => {
+//     const list = document.getElementById('cards');
+//     list.innerHTML += ` <div class="card" >
+//           <img src="${e.image.original}" alt="">
+//           <div class="span-items">
+//               <h4>${e.name}</h4>
+//               <span id="${e.id}">${like}</span>
+//           </div>
+//           <button movie-id="${e.id}" id="${e.id}" class="comment-btn">Comment</button>
+//           </div>`;
+//   });
+// };
+
+// const getId = async(e) => {
+//   const likes = await updateLikes(e)
+//   return likes
+// }
+
+// export default Render;
+
+
+import { updateLikes } from './getLikes.js';
+
 const Render = async (data) => {
-  data.forEach((e) => {
+  data.forEach(async (e) => {
+ 
+    const likes = await updateLikes(e.id);
     const list = document.getElementById('cards');
     list.innerHTML += ` <div class="card" >
-          <img src="${e.image.original}" alt="">
-          <div class="span-items">
-              <h4>${e.name}</h4>
-              <span>14 likes</span>
-          </div>
-          <button movie-id="${e.id}" id="${e.id}" class="comment-btn">Comment</button>
-          </div>`;
+        <img src="${e.image.original}" alt="">
+        <div class="span-items">
+            <h4>${e.name}</h4>
+            <i class="far fa-heart likes" id="love-icon"></i>
+            <span id="${e.id}">${likes}</span>
+        </div>
+        <button id="${e.id}" class="comment-btn">Comment</button>
+        
+        </div>`;
   });
 };
 
