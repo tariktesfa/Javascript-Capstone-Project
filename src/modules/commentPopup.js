@@ -123,15 +123,4 @@ const showCommentPopup = async (movieId) => {
   closeCommentPopup();
 };
 
-// const displayComments = () => {
-//   const commentBtns = document.querySelectorAll('.comment-btn');
-//   commentBtns.forEach((movie) => {
-//     movie.addEventListener('click', () => {
-//       const movieId = movie.getAttribute('movie-id');
-//       showCommentPopup(movieId);
-//       document.body.style.overflow = 'hidden';
-//     });
-//   });
-// };
-
 export default showCommentPopup;
