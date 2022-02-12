@@ -11,7 +11,7 @@ const Render = async (data) => {
             <i class="far fa-heart likes" id="love-icon"></i>
             <span id="${e.id}">${likes}</span>
         </div>
-        <button movie-id="${e.id}" id="${e.id}" class="comment-btn">Comment</button>
+        <button id="${e.id}" class="comment-btn">Comment</button>
         </div>`;
   });
 };

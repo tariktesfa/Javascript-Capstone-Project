@@ -1,7 +1,7 @@
 import './style.css';
 import Render from './modules/render.js';
 import moviesCall from './modules/movieCall.js';
-import displayComment from './modules/commentPopup.js';
+import { showCommentPopup } from './modules/commentPopup.js';
 
 const starter = async () => {
   const movie = await moviesCall();
@@ -9,6 +9,10 @@ const starter = async () => {
   await Render(films);
 };
 
-starter().then(() => {
-  displayComment();
+starter();
+
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.comment-btn')) {
+    showCommentPopup(e.target.id);
+  }
 });

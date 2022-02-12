@@ -1,9 +1,27 @@
-import getMovieComment from './comment.js';
-import updateCommentCounter from './commentCounter.js';
+const commentCounter = (data) => (typeof (data) === 'object' ? data.length : 'invalid');
+
+const commentsApiKey = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
+const getMovieComment = async (movieId) => {
+  const response = await fetch(`${commentsApiKey}?item_id=${movieId}`);
+  return response.json();
+};
+
+const commentPopup = document.querySelector('.comment-popup');
+const getTotalComments = async (movieId) => {
+  const result = await getMovieComment(movieId)
+    .then((comment) => (!comment.error ? comment.length : 0))
+    .catch(() => 0);
+  return result;
+};
+
+const updateCommentCounter = (movieId) => {
+  getTotalComments(movieId).then((totalComment) => {
+    commentPopup.querySelector('.total-comments').innerHTML = totalComment;
+  });
+};
 
 const commentApiEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dLRWdvDoWjaapH1JgaCf/comments';
 const movieApi = 'https://api.tvmaze.com/shows';
-const commentPopup = document.querySelector('.comment-popup');
 
 const get = (url) => fetch(url)
   .then((res) => res.json())
@@ -58,8 +76,8 @@ const closeCommentPopup = () => {
   });
 };
 
-const showCommentPopup = (movieId) => {
-  getMovieData(movieId).then((data) => {
+const showCommentPopup = async (movieId) => {
+  await getMovieData(movieId).then((data) => {
     commentPopup.innerHTML = `<div class="popup">
     <button id="close"><i class="fa fa-times" aria-hidden="true"></i></button>
     <div class="container">
@@ -99,7 +117,6 @@ const showCommentPopup = (movieId) => {
       </div>
     </div>
   </div>`;
-    closeCommentPopup();
     showComments(movieId);
 
     const form = commentPopup.querySelector('.form');
@@ -122,15 +139,13 @@ const showCommentPopup = (movieId) => {
   closeCommentPopup();
 };
 
-const displayComments = () => {
-  const commentBtns = document.querySelectorAll('.comment-btn');
-  commentBtns.forEach((movie) => {
-    movie.addEventListener('click', () => {
-      const movieId = movie.getAttribute('movie-id');
-      showCommentPopup(movieId);
-      document.body.style.overflow = 'hidden';
-    });
-  });
-};
+document.addEventListener('click', async (e) => {
+  if (e.target.matches('.comment-btn')) {
+    showCommentPopup(e.target.id);
+    const comment = await getMovieComment(e.target.id);
+    commentCounter(comment);
+    updateCommentCounter(e.target.id);
+  }
+});
 
-export default displayComments;
+export { showCommentPopup, commentCounter };
