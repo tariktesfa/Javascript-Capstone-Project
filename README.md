@@ -13,7 +13,7 @@ It is a JavaScript group capstone project built with an external Movie API.
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://tariktesfa.github.io/Javascript-Capstone-Project/dist/)
 
 ## Clone and review it
 
