@@ -6,11 +6,6 @@ It is a JavaScript group capstone project built with an external Movie API.
 
 ![screenshot](https://user-images.githubusercontent.com/38283436/153200284-0fe1978e-8b14-48f9-a59a-5f5aba8bdd1b.png)
 
-## Video Presentation
-
-[Click on the link to see the presentation](https://www.loom.com/share/828b38b2455e491a8151c352ab54727b?sharedAppSource=personal_library)
-
-
 ## Live Demo
 
 [Live Demo Link](https://tariktesfa.github.io/Javascript-Capstone-Project/dist/)
